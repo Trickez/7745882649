@@ -93,7 +93,7 @@ class Run:
             II = func.url('post', self.api, 'bunker', data).json()
             response = II['response']
 
-            if (self.captcha):
+            if (self.captcha == 'True'):
                 stop.append('true')
                 func.log('bunker', "Captcha - system stopted")
                 toast.show_toast("Mastercrimez - captcha","Captcha! Failed stopping bot", duration=10)
